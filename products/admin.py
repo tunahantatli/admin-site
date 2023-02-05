@@ -28,9 +28,9 @@ class ProductAdmin(admin.ModelAdmin):
 
     def is_in_stock(self, request, queryset):
         count = queryset.update(is_in_stock=True)
-        self.message_user(request, f"{count} çeşit ürün stoğa eklendi")
+        self.message_user(request, f"{count} kinds of products added to stock.")
         
-    is_in_stock.short_description = 'İşaretlenen ürünleri stoğa ekle'
+    is_in_stock.short_description = 'Add Selected Products to Stock'
 
 
 
